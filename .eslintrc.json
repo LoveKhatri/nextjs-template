@@ -1,3 +1,33 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "settings": {
+    "next": {
+      "rootDir": "./src"
+    }
+  },
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "react/no-unescaped-entities": "warn",
+    "react/display-name": "warn",
+    "react/no-unknown-property": "warn",
+    "react/style-prop-object": "warn",
+    "react/jsx-pascal-case": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-async-promise-executor": "warn",
+    "no-console": "off",
+    "no-debugger": "warn",
+    "prefer-const": "warn",
+    "prettier/prettier": "off"
+  }
 }

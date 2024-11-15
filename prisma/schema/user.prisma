@@ -1,0 +1,26 @@
+model User {
+    // The following fields are managed by AuthJs, changing them would lead to a breakdown
+    id            String    @id @default(cuid())
+    name          String?
+    email         String    @unique
+    emailVerified DateTime? @map("email_verified")
+    image         String?
+    password      String?
+    accounts      Account[]
+
+    // ! We are not using sessions
+    // sessions      Session[]
+
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+
+    // Custom Fields, you can add more fields to the user model
+    role UserRole @default(USER)
+
+    @@map("users")
+}
+
+enum UserRole {
+    ADMIN
+    USER
+}
