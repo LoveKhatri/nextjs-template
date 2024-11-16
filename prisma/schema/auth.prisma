@@ -34,10 +34,19 @@ model Account {
 // }
 
 model VerificationToken {
-    identifier String
-    token      String
+    identifier String // Email of the user
+    token      String   @unique
     expires    DateTime
 
     @@id([identifier, token])
     @@map("verification_tokens")
+}
+
+model PasswordResetToken {
+    identifier String // Email of the user
+    token      String   @unique
+    expires    DateTime
+
+    @@id([identifier, token])
+    @@map("password_reset_tokens")
 }

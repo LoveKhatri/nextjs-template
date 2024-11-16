@@ -1,5 +1,5 @@
 if (!process.env.SALT) {
-    throw new Error('SALT is not defined');
+    throw new Error('Missing Environment Variable!!!\n- SALT');
 }
 
 const SALT = process.env.SALT;

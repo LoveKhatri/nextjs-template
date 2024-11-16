@@ -25,7 +25,7 @@ const requiredEnvVars = [
 const missingEnvVars = requiredEnvVars.filter((envVar) => !process.env[envVar]);
 
 if (missingEnvVars.length > 0) {
-    throw new Error(`Missing Environment Variables!!!\n${missingEnvVars.join("\n- ")}`);
+    // throw new Error(`Missing Environment Variables!!!\n- ${missingEnvVars.join("\n- ")}`);
 }
 
 export default {

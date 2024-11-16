@@ -3,7 +3,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import authConfig from "./auth.config"
 import { prisma } from "@/lib/db"
 // import { User } from "@prisma/client";
-// import redis from "./lib/redis";
+// import redis from "@/lib/redis";
 
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
