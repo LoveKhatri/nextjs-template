@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { BeatLoader } from "react-spinners";
 
 export const metadata: Metadata = {
     title: "Auth",
@@ -12,7 +14,9 @@ export default function AuthLayout({
 }>) {
     return (
         <div className="w-full h-screen bg-sky-50 flex items-center justify-center">
-            {children}
+            <Suspense fallback={<BeatLoader />}>
+                {children}
+            </Suspense>
         </div>
     );
 }
